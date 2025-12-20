@@ -1,0 +1,159 @@
+import { motion } from 'framer-motion';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { personalInfo } from '../constants/data';
+
+const Hero = () => {
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 pb-12 relative overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-900 dark:to-primary-900/20"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.1),transparent_50%)]"></div>
+      <div className="relative z-10 w-full">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-center max-w-4xl mx-auto"
+        >
+        <motion.div
+          variants={itemVariants}
+          className="mb-6"
+        >
+          <motion.div
+            className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-400 to-primary-600 p-1 shadow-2xl"
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-primary-700 dark:from-primary-600 dark:to-primary-800 flex items-center justify-center text-4xl font-bold text-white shadow-inner">
+              AA
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <motion.h1
+          variants={itemVariants}
+          className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-primary-600 via-primary-500 to-primary-400 bg-clip-text text-transparent"
+        >
+          {personalInfo.name}
+        </motion.h1>
+
+        <motion.p
+          variants={itemVariants}
+          className="text-2xl md:text-3xl text-gray-600 dark:text-gray-400 mb-6"
+        >
+          {personalInfo.title}
+        </motion.p>
+
+        <motion.p
+          variants={itemVariants}
+          className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed"
+        >
+          {personalInfo.bio}
+        </motion.p>
+
+        <motion.div
+          variants={itemVariants}
+          className="flex justify-center space-x-4 mb-12"
+        >
+          <motion.a
+            href={personalInfo.socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Github size={24} />
+          </motion.a>
+          <motion.a
+            href={personalInfo.socialLinks.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Linkedin size={24} />
+          </motion.a>
+          <motion.a
+            href={`mailto:${personalInfo.email}`}
+            className="p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-all shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.1, y: -5 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Mail size={24} />
+          </motion.a>
+        </motion.div>
+
+        <motion.div
+          variants={itemVariants}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <motion.button
+            onClick={() => scrollToSection('#projects')}
+            className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            View My Work
+          </motion.button>
+          <motion.button
+            onClick={() => scrollToSection('#contact')}
+            className="px-8 py-4 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Get In Touch
+          </motion.button>
+        </motion.div>
+
+        <motion.div
+          variants={itemVariants}
+          className="mt-16"
+        >
+          <motion.button
+            onClick={() => scrollToSection('#about')}
+            className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 2 }}
+            whileHover={{ scale: 1.1 }}
+          >
+            <ArrowDown size={32} />
+          </motion.button>
+        </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+
