@@ -65,7 +65,7 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="px-3 py-1 bg-primary-600 text-white rounded-full text-xs font-semibold shadow-lg">
-                    Featured
+                    {project.projectType || 'Featured'}
                   </span>
                 </div>
               </div>

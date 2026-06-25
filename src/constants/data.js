@@ -28,12 +28,43 @@ export const skills = [
 export const projects = [
   {
     id: 1,
-    title: 'Vape Mediclinic',
-    description: 'A comprehensive healthcare platform where users can consult with doctors online. Features include appointment booking, video consultations, prescription management, and patient history tracking. Built with modern UI/UX principles for seamless user experience.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    title: 'AI-Powered Library Management System',
+    projectType: 'Final Year Project (FYP)',
+    description:
+      'An intelligent web-based library management system that uses Artificial Intelligence to improve book discovery, recommendations, and library operations. The system allows students and librarians to manage books, track borrowing records, search resources efficiently, and receive AI-powered book recommendations based on interests and borrowing history.',
+    features: [
+      'User Authentication and Authorization',
+      'Book Management System',
+      'Borrow and Return Books',
+      'AI-Powered Book Recommendations',
+      'Smart Search Functionality',
+      'Library Dashboard and Analytics',
+      'Student and Librarian Roles',
+      'Book Availability Tracking',
+      'Fine Management',
+      'Responsive UI',
+    ],
+    objectives: [
+      'Automate library book management and borrowing workflows',
+      'Implement AI-driven book recommendations based on user interests and history',
+      'Provide secure role-based access for students and librarians',
+      'Enable efficient resource search and book discovery',
+      'Track book availability, borrowing records, and fine management in one platform',
+    ],
+    technologies: [
+      'React.js',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'JWT',
+      'Gemini API',
+      'OpenAI API',
+      'Git & GitHub',
+    ],
+    image: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop',
+    github: 'https://github.com/ali-devx/final-year-project',
+    demo: 'https://github.com/ali-devx/final-year-project',
   },
   {
     id: 2,
@@ -41,7 +72,7 @@ export const projects = [
     description: 'A modern, feature-rich blogging platform with user authentication, rich text editor, comment system, and category management. Includes admin dashboard for content management, SEO optimization, and analytics integration.',
     technologies: ['React', 'MongoDB', 'Express.js', 'Node.js', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800',
-    github: 'https://github.com',
+    github: 'http://github.com/ali-devx',
     demo: 'https://pflegepur.de/',
   },
   {
@@ -59,8 +90,8 @@ export const projects = [
     description: 'An intuitive food delivery application with real-time order tracking, restaurant listings, menu management, and delivery status updates. Features include user authentication, payment gateway integration, and order history.',
     technologies: ['React', 'MongoDB', 'Express.js', 'Node.js', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800',
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    github: 'http://github.com/ali-devx/Ecommerce-Website',
+    demo: 'http://github.com/ali-devx/Ecommerce-Website',
   },
 ];
 
@@ -75,6 +106,6 @@ export const experience = [
     company: 'Self-Learning & Projects',
     position: 'Web Developer',
     period: '2022 - 2023',
-    description: 'Built multiple projects including healthcare platforms, e-commerce sites, and blogging websites. Continuously learning and implementing modern web development practices.',
+    description: 'Built multiple projects including an AI-powered library management system (FYP), e-commerce sites, and blogging websites. Continuously learning and implementing modern web development practices.',
   },
 ];

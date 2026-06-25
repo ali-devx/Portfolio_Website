@@ -52,7 +52,7 @@ const About = () => {
               {personalInfo.bio}
             </p>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and have successfully delivered multiple projects including healthcare platforms, e-commerce solutions, and content management systems. My focus is on writing clean, maintainable code and creating seamless user experiences.
+              I specialize in the MERN stack (MongoDB, Express.js, React, Node.js) and have successfully delivered multiple projects including an AI-powered library management system (Final Year Project), e-commerce solutions, and content management systems. My focus is on writing clean, maintainable code and creating seamless user experiences.
             </p>
             <div className="space-y-4 pt-4">
               <div className="flex items-center space-x-3 text-gray-700 dark:text-gray-300">
