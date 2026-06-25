@@ -42,7 +42,7 @@ export const projects = [
     technologies: ['React', 'MongoDB', 'Express.js', 'Node.js', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800',
     github: 'https://github.com',
-    demo: 'https://demo.com',
+    demo: 'https://pflegepur.de/',
   },
   {
     id: 3,
