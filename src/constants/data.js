@@ -81,8 +81,8 @@ export const projects = [
     description: 'A full-featured e-commerce platform with shopping cart, payment integration, order management, and admin panel. Includes product filtering, search functionality, user reviews, and secure checkout process.',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800',
-    github: 'https://github.com',
-    demo: 'https://demo.com',
+    github: 'http://github.com/ali-devx/Ecommerce-Website',
+    demo: 'http://github.com/ali-devx/Ecommerce-Website',
   },
   {
     id: 4,
@@ -90,8 +90,8 @@ export const projects = [
     description: 'An intuitive food delivery application with real-time order tracking, restaurant listings, menu management, and delivery status updates. Features include user authentication, payment gateway integration, and order history.',
     technologies: ['React', 'MongoDB', 'Express.js', 'Node.js', 'Bootstrap'],
     image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800',
-    github: 'http://github.com/ali-devx/Ecommerce-Website',
-    demo: 'http://github.com/ali-devx/Ecommerce-Website',
+    github: 'https://github.com/ali-devx/food_delivery_project',
+    demo: 'https://github.com/ali-devx/food_delivery_project',
   },
 ];
 
